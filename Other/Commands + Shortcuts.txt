@@ -1,0 +1,119 @@
+Coding Notes:
+Git commands:
+* git clone - copies an entire repo (to begin)
+* git add - adds a file for inclusion in git
+* git commit - notes a change to the local repo
+* git push - sends changes to hosting service
+* git pull - downloads freshest version of repo
+* git . - adds everything in the folder to git
+* git status - obvious
+
+Bootstrap:
+http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works
+Hierarchy: 
+1. container 
+2. Rows
+3. columns per row
+    1. wrap column divs inside row div
+    2. each row has 12 columns - always make sure each rows columns add up to 12, DON’T SET COLUMN DIV TO HAVE MORE THAN 12 COLUMNS
+
+Javascript:
+* any data value that is text is a string and inputting a string into javascript requires the text wrapped in quotes
+* numbers don’t require quotes
+* booleans are to confirm true/false, no quotes needed
+* array position starts at 0.  1st position in an array is “0th”, then continues up
+* “++” increments by 1 (adds 1)
+* “+=2” allows you to add any number you want, instead of incrementing by only 1
+* “-=“ allows you to subtract in similar fashion to the above
+* “===“ is to check if one thing is equal to another
+* “push” assigns a variable or some set of data to an array that it is designated to
+* “typeof” tells us if something is a string or number
+* Arrays use [] where as objects use {}
+* Objects can be called using {‘’} as shown above, or (more commonly) can use *var name*.*value to look up*
+* ‘.innerHTML’ vs ‘textContent’
+    * innerHTML allows for html/other code to render
+    * textContent will only allow for text, won’t render HTML
+* document.querySelector vs document.getElementById:
+    * querySelector allows for the call of both classes & IDs
+    * getElementById only allows IDs, getElementByClass only allows classes
+* document.createElement allows us to create an html tag
+* setAttribute(name,value) —> .setAttribute(‘class’, ‘className’)
+* Math.floor(Math.random() * 2); —> returns a random number between 0 and 1
+
+jQuery:
+* $(“ ”) syntax
+* switch/break /default (read up on this)  is equivalent to javascript if/else
+
+Interview prep:
+3 questions that will inevitably be asked:
+* Tell me about yourself.
+* Tell me about your experience with Javascript.
+* Tell me about some of your projects?
+
+Local Storage:
+* Check out file for local storage to do list
+* local storage only saves things as strings. must use JSON.stringify in order to be able to later manipulate the data needed with JSON.parse
+
+Constructors:
+* Always need to use “new” in front of variable to use constructor
+
+SQL
+C.R.U.D/SQL/HTTP
+create/create/put | post
+read/select/get
+update/insert | update/put | post
+delete/delete/delete
+
+Express JS
+1. first require the http module //const http = require('http');
+2. set port to listen on - like address of particular program //const PORT = XXXX; //where X's stands for digits of port number
+3. write code to create a response. This is done with a handleRequest function. Runs everytime client requests something and it figures out what to send back
+//function handleRequest (request, response) {
+    response.end('path hit: ' + request.url)
+}
+4. Use node to create server & tell it to always run function when
+const server = http.createServer(handleRequest);
+5. add listen function to tell server to start listening for requests (ex. 'on' button). It takes 2 arguments. The port and
+server.listen(PORT, function() {
+    //callback function not necessary but good to have to log response as confirmation.
+    console.log('server listening on: http://localhost:' + PORT);
+});
+
+
+-------------------
+mysql on mac 
+mysql.server start
+mysql -u root -p
+source schema.sql (of whatever filename is)
+-----------------------------------------------------------------------
+HandleBars Folder Setup
+
+    Directory structure. The project must look like:
+
+```server.js
+views
+  |_index.handlebars
+  |_layouts/
+    |_main.handlebars
+```
+
+...Where other `*.handlebars` files can live next to `index`.
+
+- The `res.render` call. What is the first argument? The second argument? Explain the role of these arguments to your seat partner.
+
+- The syntax for Handlebars files. In particular, look at `icecreams.handlebars`. Explain the use of the `each` helper to your partner. What does `each` do? What HTML gets repeated in the implicit `for` loop?
+--------------------------------------------------------------------------
+
+FOR KEEPING PASSWORD SECRET WHEN REQUIRED IN SERVER.JS
+export PASSWORD = "Enter password here" //in terminal
+
+this sets variable env to the password
+then in mysql connection variable in the server, you would just put password: process.env.PASSWORD
+
+this makes the server search for the password instead of putting it in the js file. To prevent it being saved and tracked in Github it being saved and tracked in Github
+
+SEQUELIZE
+npm install -g sequelize sequelize-cli
+npm install sequelize mysql2 --save
+
+*Windows users*, you'll have to make a change to Line 8 of `config/config.json`. Update it to look like this: var config    = require(path.join(__dirname, '/..\config\config.json'))[env];

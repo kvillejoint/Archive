@@ -1,0 +1,11 @@
+For Using Yummly API - Project 1
+
+Notes: 
+Use this code as an idea, or a starting point. Change things to better suit your needs and re-write it to better exercise your skills. Run this code to search terms and get results. I printed the images onto the page. Looking into where the actual recipes are stored.
+
+1. Change AppID and APIKey ASAP
+2. I used *template literals* rather than what we’re used to seeing with the URL string `+` “strings”. Here’s a link to read more about this, and note where they say `${expressions} and how I’m using it to call on variables. 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+3. I used a `.forEach` which does the same thing as a for loop. Here’s a link to read more about this as well: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?v=example
+
+#3 is something we’ll be learning in a few weeks. #2 is not something we’ll cover in class, but it is also not an important part of web development. It’s a style choice more than anything.

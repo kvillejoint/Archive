@@ -1,0 +1,5 @@
+Shared Resources:
+http://www.stevemcconnell.com/ieeesoftware/bp04.htm
+http://www.tutorialspoint.com/sdlc/sdlc_software_prototyping.htm
+https://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/
+https://www.mountaingoatsoftware.com/blog/agile-succeeds-three-times-more-often-than-waterfall

@@ -1,0 +1,24 @@
+Kamal Villejoint
+Assignment 7: Errors in Broken Code Folder
+
+HTML
+1. <h1> was missing from both ends of the “Boo the Dog Fan Page!” title (line 19)
+2. Instructions are listed as text center (line 26)
+3. Paragraph (<p> and </p>) missing from About Boo section
+4. Link not properly quoted for “read more at” section
+5. <> Brackets missing from image for Boo section
+6. <li> and </li> missing from items in Boo’s Favorite Things
+7. Colors not matching textColor in buttons
+8. Linking to JavaScript file was incorrectly mapping to src=”errors.js” instead of “logic.js”
+9. Text-center in wrong line for Random Boo Fact section. Should be in opening to section on line 56 not with col-sm-6 line 58
+
+logic.js
+1. No instructions/comments for the code
+2. BooFacts instead of booFactArray (lines 4, 6, 10)
+3. Quotations missing for each individual boo Fact and extra space before ] symbol that closes array (line 10)
+4. Quotations missing for pink (line 15)
+5. Quotations missing for click (line 32, 37)
+
+
+Style.css
+1. No differences
